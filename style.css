@@ -1,0 +1,154 @@
+*{
+    font-family: 'roboto', 'poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: #c4fcc1;
+    text-align: center;
+}
+.header{
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px 50px;
+}
+.header #header-link{
+    border: 1px solid #000;
+    background-color: #47FF43;
+    color: #000;
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 10px 30px 10px 30px;
+    font-size: 16px;
+    padding: 10px;
+    transition: 0.3s;
+}
+.header #header-link:hover{
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+.logo img{
+    height: 60px;
+}
+.checks{
+    margin-top: 35px;
+}
+.checks img{
+    height: 70%;
+}
+.checks .lixeiras {
+    width: 60%;
+    height: 80px;
+    margin: 1rem auto;
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    color: #323232;
+}
+.checks .lixeiras .lixeira{
+    padding: 10px;
+    height: 100%;
+    width: 100px;
+    box-sizing: border-box;
+    margin: 0 1rem;
+    position: relative;
+    border: 2px solid black;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    transition: 0.3s;
+}
+.checks .lixeiras .lixeira:hover{
+    transform: scale(1.2);
+    transition: 0.3s;
+}
+#met{
+    background-color: #FFED48;
+}
+#met:hover{
+    background-color: #f8e10d;
+}
+#pap{
+    background-color: #4584FF;
+}
+#pap:hover{
+    background-color: #0c5cfd;
+}
+#vid{
+    background-color: #47FF43;
+}
+#vid:hover{
+    background-color: #0ffa0b;
+}
+#plas {
+    background-color: #FA3C3C;
+}
+#plas:hover{
+    background-color: #fc0505;
+}
+#cob{
+    background-color: #AA5200;
+}
+#cob:hover{
+    background-color: #c56002;
+}
+.checks .lixeiras .lixeira input[type="radio"]{
+    opacity: 0;
+    position: fixed;
+    width: 0;
+}
+.checks .lixeiras .lixeira p{
+    font-weight: 700;
+    font-size: 14px;
+}
+.checks .lixeiras .lixeira label{
+    z-index: 15;
+    position: absolute;
+    bottom: 0; top: 0; right: 0; left: 0;
+    cursor: pointer;
+    display: block;
+    font-size: 0;
+    white-space: nowrap;
+}
+.lixeira:has(input:checked){
+    transform: scale(1.2);
+}
+.kgs-calculo{
+    margin-top: 35px;
+}
+.ipt-kgs{
+    margin-top: 10px;
+    width: 100px;
+    height: 30px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 20px;
+}
+#btn-calcular {
+    font-weight: 700;
+    background-color: #47FF43;
+    border-radius: 10px;
+    font-size: 20px;
+    margin: 15px auto;
+    display: flex;
+    cursor: pointer;
+    gap: 10px;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 150px;
+}
+#btn-calcular:hover{
+    background-color: #0ffa0b;
+}
+#btn-calcular img{
+    width: 35px;
+}
+#result{
+    margin-top: 25px;
+    font-size: 24px;
+    display: none;
+}
+#frase-invalida{
+    display: none;
+}

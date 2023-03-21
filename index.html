@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
+    <link rel="icon" href="./img/reclogo.png">
+    <link rel="stylesheet" href="./style.css">
+    <title>ReCalc - Ganhe com seu lixo!</title>
+    
+</head>
+<body>
+    <header class="header">
+        <a id="header-link" href="./tabela-precos.html">Tabela de Preços</a>
+    </header>
+    <section class="logo">
+        <img src="./img/logo.png" alt="">
+    </section>
+    <section class="checks">
+        <h1 id="pergunta-1">
+            Qual material você deseja reciclar?
+        </h1>
+        <ul class="lixeiras">
+            <li class="lixeira" id="met">
+                <input onchange="someTexto()" name="lixeiras" type="radio" id="metal" value="1" checked>
+                <label for="metal" title="Metal">Metal</label>
+                <img src="./img/reciclagem-de-metal.png" alt="metal-aluminio">
+                <p>Metal</p>
+            </li>
+        
+            <li class="lixeira" id="pap">
+                <input name="lixeiras" onchange="someTexto()" type="radio" id="papel" value="2">
+                <label for="papel" title="Cachorro-Quente">Papel</label>
+                <img src="./img/papel.png" alt="papel">
+                <p>Papel</p>
+            </li>
+            
+            <li class="lixeira" id="vid">
+                <input name="lixeiras" onchange="someTexto()" type="radio" id="vidro" value="3">
+                <label for="vidro" title="Vidro">Vidro</label>
+                <img src="./img/vidro-quebrado.png" alt="vidro">
+                <p>Vidro</p>
+            </li>
+    
+            <li class="lixeira" id="plas">
+                <input name="lixeiras" onchange="someTexto()" type="radio" id="plastico" value="4">
+                <label for="plastico" title="Plástico">Plástico</label>
+                <img src="./img/garrafa-de-plastico.png" alt="plastico">
+                <p>Plástico</p>
+            </li>
+
+            <li class="lixeira" id="cob">
+                <input name="lixeiras" onchange="someTexto()" type="radio" id="cobre" value="5">
+                <label for="cobre" title="Cobre">Cobre</label>
+                <img src="./img/cobre.png" alt="cobre">
+                <p>Cobre</p>
+            </li>
+        </ul>
+    </section>
+    <section class="kgs-calculo">
+        <h1 id="pergunta-2">Quantos quilos (KGs) deseja reciclar desse material?</h1>
+        <input id="kgs" type="number" class="ipt-kgs" maxlength="4" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength)" step=".01"><br>
+        <button id="btn-calcular" onclick="calcular()"><img src="./img/reclogo.png" alt="">Calcular</button>
+    </section>
+    <section>
+        <h3 id="result">O valor que você receberá ao reciclar este material pode ser de <span id="valMin" style="color: #FF0000">R$XX,XX</span> até <span id="valMax" style="color: #FF0000">R$XX,XX</span>.<br>Muito Bem!</h3>
+        <h3 id="frase-invalida">Por favor, insira um valor válido para que seja calculado!</h3>
+    </section>
+    <script src="./script.js"></script>
+</body>
+</html>

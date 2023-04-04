@@ -30,7 +30,7 @@ function calcular(){
         document.getElementById("result").style.display = 'block';
         document.getElementById("frase-invalida").style.display = 'none';
     }
-    else if (peso = 0 || peso < 0){
+    else if (peso == 0 || peso < 0 || peso == ''){
         document.getElementById("frase-invalida").style.display = 'block';
         document.getElementById("result").style.display = 'none';
     }
